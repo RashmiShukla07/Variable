@@ -7,14 +7,17 @@ require('dotenv').config();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+app.set('view engine', 'ejs');
+
 app.get("/",function(req,res){
-  res.sendFile(__dirname+"/index.html");
+  res.render('weather');
 });
 
 app.post("/",function(req,res){
   const query = req.body.city;
+  const queryst = req.body.state;
   const units = "metric";
-  const url = "https://api.openweathermap.org/data/2.5/weather?q="+query+"&appid="+process.env.API_KEY+"&units="+units;
+  const url = "https://api.openweathermap.org/data/2.5/weather?q="+query+","+queryst+"&appid="+process.env.API_KEY+"&units="+units;
   https.get(url, function(response){
     console.log(response.statusCode);
     response.on('data', function(data){
