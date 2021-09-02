@@ -44,6 +44,17 @@ app.post("/",function(req,res){
   });
 })
 
+app.get("/about", function(req, res){
+  res.render("about");
+});
+
+app.get("/contact", function(req, res){
+  res.render("contact");
+});
+
+app.get("/reference", function(req, res){
+  res.render("reference");
+});
 
 app.listen(3000, function(){
   console.log("Server Running On Port 3000");

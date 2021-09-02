@@ -725,6 +725,7 @@ Banner Style
   background-position: center center;
   background-size: cover;
   background-image: url(../images/banner-bg.jpg);
+  opacity: 0.8;
   padding: 290px 0px 180px 0px;
   position: relative;
   overflow: hidden;
@@ -2071,4 +2072,11 @@ responsive
   .category-post .icon {
     transform: translateX(-22px);
   }
+}
+
+.reference-card {
+  margin: 40px 40px 40px 40px;
+}
+h1{
+  text-align: center;
 }
