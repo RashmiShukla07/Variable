@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser  = require('body-parser');
 const https = require('https');
 const app = express();
+const date  = require(__dirname+"/date.js");
 require('dotenv').config();
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -14,6 +15,7 @@ app.get("/",function(req,res){
 });
 
 app.post("/",function(req,res){
+  const Day  = date.getDate();
   const query = req.body.city;
   const queryst = req.body.state;
   const units = "metric";
@@ -24,11 +26,20 @@ app.post("/",function(req,res){
       const weatherdata = JSON.parse(data);
       const temp = weatherdata.main.temp;
       const weatherdesc = weatherdata.weather[0].description;
+      const condition = weatherdata.weather[0].main;
+      const humid = weatherdata.main.humidity;
+      const windspeed = weatherdata.wind.speed;
+      const clouds = weatherdata.clouds.all;
       const imageUrl = "http://openweathermap.org/img/wn/"+weatherdata.weather[0].icon+"@2x.png" ;
-      res.write("<p>The weather condition is currently "+weatherdesc+"</p>");
-      res.write("<h1>The temprature in "+query+" is " + temp + " degree Celcius.</h1>");
-      res.write("<img src= "+imageUrl+">");
-      res.send()
+      res.render('searchRes',{weatherdesc: weatherdesc,
+        Day: Day,
+        query: query,
+         temp: temp,
+         condition: condition,
+          humid: humid,
+           windspeed:windspeed,
+           clouds: clouds,
+            imageUrl: imageUrl})
     });
   });
 })
