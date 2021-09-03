@@ -725,6 +725,7 @@ Banner Style
   background-position: center center;
   background-size: cover;
   background-image: url(../images/banner-bg.jpg);
+  opacity: 0.85;
   padding: 290px 0px 180px 0px;
   position: relative;
   overflow: hidden;
@@ -813,6 +814,48 @@ form#search-form button i {
     text-align: center;
   }
 
-h1{
-  text-align: center;
-}
+  .content {
+    text-align: center;
+    color: white;
+    padding: 5%;
+    font-family: 'Azeret Mono', monospace;
+    font-size: 20px;
+  }
+
+/* Contact Us */
+  .contact-form{
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    margin: auto;
+    margin-left: 510px;
+   align-items: center;
+  }
+
+  .contact-form input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .contact-form input[type="text"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .subBtn{
+    padding: 5%;
+    padding-left:  16%;
+  }
+
+  /* References */
+  #pricing{
+    padding: 100px;
+  }
+  .price-text{
+    font-size: 3rem;
+    line-height: 1.5 ;
+  }
+  .pricing-column{
+    padding: 3%;
+  }
