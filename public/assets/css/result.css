@@ -108,3 +108,9 @@ input:focus {
         padding-left: 26px
     }
 }
+
+/* bottom most div */
+
+.bottom {
+    text-align: center;
+}
