@@ -792,7 +792,8 @@ form#search-form button i {
     text-align: center;
     color: white;
     padding: 5%;
-    font-family: 'Azeret Mono', monospace;
+    font-family: "Montserrat";
+    font-weight: 700 !important;
     font-size: 20px;
   }
 
@@ -829,7 +830,8 @@ form#search-form button i {
 
   }
   .price-text{
-    font-family: 'Azeret Mono', monospace;
+    font-family : "Montserrat";
+    font-weight: 700 !important;
     color: #5F7A61;
 
   }

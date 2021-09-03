@@ -1,9 +1,13 @@
+p{
+  font-family: "Montserrat";
+  font-weight: 400 !important;
+}
 body {
     color: #fff;
     overflow-x: hidden;
     height: 100%;
     /* background-image: linear-gradient(#81D4FA, #2196F3); */
-    background-image : linear-gradient(#81D4FA, #2196F3);
+    background-image : linear-gradient(#2196F3, #81D4FA);
     background-repeat: no-repeat
 }
 .result-img{
@@ -20,7 +24,7 @@ body {
 }
 
 .card1 {
-    background-image: linear-gradient(#2196F3, #81D4FA);
+    background-image: linear-gradient(#81D4FA,#2196F3);
     padding: 30px 20px 30px 50px
 }
 
