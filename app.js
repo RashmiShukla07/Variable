@@ -22,6 +22,7 @@ app.get("/",function(req,res){
 
 app.post("/",function(req,res){
   const Day  = date.getDate();
+  const Time = date.getTime();
   const query = req.body.city;
   const queryst = req.body.state;
   const units = "metric";
@@ -47,6 +48,7 @@ app.post("/",function(req,res){
       }
       res.render('searchRes',{weatherdesc: weatherdesc,
         Day: Day,
+        Time: Time,
         query: query,
          temp: temp,
          condition: condition,
@@ -95,7 +97,7 @@ app.get("/about", function(req, res){
 app.get("/contact", function(req, res){
   res.render("contact");
 
-  
+
 });
 
 app.get("/reference", function(req, res){

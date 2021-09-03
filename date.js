@@ -8,6 +8,12 @@ exports.getDate = function (){
   return Today.toLocaleDateString("en-US", options);
 }
 
+exports.getTime = function(){
+var today = new Date();
+const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    return  time
+}
+
 exports.getDay = function(){
   const Today = new Date();
   const options = {
