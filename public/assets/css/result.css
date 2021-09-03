@@ -112,5 +112,11 @@ input:focus {
 /* bottom most div */
 
 .bottom {
-    text-align: center;
+    text-align: left;
+}
+.search{
+  padding-left : 24px;
+}
+.head-search{
+  font-size: 2rem;
 }
