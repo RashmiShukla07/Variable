@@ -241,16 +241,6 @@ header
   right: 0px;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
 }
-
-.background-header .logo,
-.background-header .main-nav .nav li a {
-  color: #1e1e1e!important;
-}
-
-.background-header .main-nav .nav li:hover a {
-  color: #8d99af!important;
-}
-
 .background-header .nav li a.active {
   color: #8d99af!important;
 }
@@ -273,22 +263,6 @@ header
 .header-area .main-nav {
   min-height: 80px;
   background: transparent;
-}
-
-.header-area .main-nav a.logo {
-  background-image: url(../images/white-logo.png);
-  width: 166px;
-  height: 58px;
-  display: inline-block;
-  margin-top: 20px;
-}
-
-.background-header .main-nav a.logo {
-  background-image: url(../images/black-logo.png);
-  width: 164px;
-  height: 58px;
-  display: inline-block;
-  margin-top: 10px;
 }
 
 .background-header .main-nav .nav {
@@ -851,11 +825,18 @@ form#search-form button i {
   /* References */
   #pricing{
     padding: 100px;
+    text-align: center;
+
   }
   .price-text{
-    font-size: 3rem;
-    line-height: 1.5 ;
+    font-family: 'Azeret Mono', monospace;
+    color: #5F7A61;
+
   }
   .pricing-column{
     padding: 3%;
+    font-family: "Montserrat" ;
+  }
+  .ref-cont{
+    padding: 4% 4% 6% 4%;
   }
